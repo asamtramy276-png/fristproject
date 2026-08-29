@@ -1,0 +1,51 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+background-color: grey;
+}
+
+.whatsapp{
+   color: green;
+}
+.Landing {
+    background-image: url(https://i.pinimg.com/736x/be/78/9d/be789d3bbea2b353c277bfcb7d3a2994.jpg); 
+    background-size: cover; 
+    height: calc(100vh - 64px); 
+    position: relative; 
+}
+
+.address{
+    padding: 15px;
+    margin: 10px;
+    font-size : 30px;
+    width: auto;
+
+}
+
+.Landing {
+    background-image: url(https://i.pinimg.com/736x/be/78/9d/be789d3bbea2b353c277bfcb7d3a2994.jpg); 
+    background-size: cover; 
+    height: calc(100vh - 64px); 
+    position: relative; 
+}
+
+.Landing .intro-text {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    text-align: center; 
+    width: 340px; 
+    max-width: 100%;
+    line-height: 1.8; 
+}
+
+.Landing .intro-text h1 {
+    margin: 0; 
+    font-weight: bold; 
+    font-size: 50px; 
+    color: beige; 
+}

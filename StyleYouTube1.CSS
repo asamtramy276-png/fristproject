@@ -1,0 +1,288 @@
+/* إعدادات الخطوط والألوان الأساسية المطابقة لـ YouTube Dark Mode */
+:root {
+  --bg-color: #0f0f0f;       /* لون الخلفية الرئيسي (أسود غامق) */
+  --secondary-bg: #222222;  /* لون خلفية ثنائي (رمادي غامق) */
+  --hover-bg: #3f3f3f;      /* لون الخلفية عند التمرير بالماوس */
+  --chip-bg: #272727;       /* لون خلفية أزرار التصفية (الرقاقات) */
+  --border-color: #303030;  /* لون الحدود */
+  --text-main: #f1f1f1;     /* لون النص الرئيسي (أبيض تقريبًا) */
+  --text-sub: #aaa;         /* لون النص الفرعي (رمادي فاتح) */
+}
+* {
+  box-sizing: border-box; /* يجعل حساب العرض والارتفاع يشمل الحواف والمسافات الداخلية */
+  margin: 0;             /* إلغاء جميع الهوامش الخارجية الافتراضية */
+  padding: 0;            /* إلغاء جميع المسافات الداخلية الافتراضية */
+}
+
+body {
+  font-family: "Roboto", "Arial", sans-serif; /* نوع الخط المستخدم مع بدائل */
+  background-color: var(--bg-color);          /* تطبيق لون الخلفية الرئيسي من المتغير */
+  color: var(--text-main);                    /* تطبيق لون النص الرئيسي */
+  overflow-x: hidden;                         /* منع ظهور شريط التمرير الأفقي */
+}
+
+/* ==================== 1. Header ==================== */
+.yt-header {
+  gap : 16px;/* ضمان مسافة بين الأقسام الثلاثة */
+  display: flex;/* استخدام نظام Flexbox لترتيب العناصر */
+  justify-content: space-between;/* توزيع العناصر بالتساوي (اليسار، الوسط، اليمين) */
+  align-items: center;/* محاذاة العناصر عموديًا في المنتصف */
+  padding: 10px 16px; /* مسافة داخلية (8px أعلى وأسفل، 16px يمين ويسار) */
+  background-color: var(--bg-color);/* لون خلفية الهيدر */
+  position: sticky;/* جعل الهيدر يلتصق بأعلى الصفحة عند التمرير */
+  top: 0; /* نقطة الالتصاق بأعلى الشاشة */
+  z-index: 100;/* لضمان ظهور الهيدر فوق بقية عناصر الصفحة */
+  font-weight:400 ;
+}
+
+
+.header-section {
+  display: flex;         /* ترتيب أجزاء القسم أفقيًا */
+  align-items: center;  /* محاذاة العناصر عموديًا في المنتصف */
+  gap: 12px;            /* المسافة بين كل عنصر والآخر */
+}
+
+/* اليسار (صورة الحساب، الجرس، إنشاء) */
+.avatar-btn {
+  width: 32px;                     /* عرض زر الصورة الشخصية */
+  height: 32px;                    /* ارتفاع زر الصورة الشخصية */
+  border-radius: 50%;              /* جعل الزر دائريًا بالكامل */
+  background-color: #5c2525;       /* لون خلفية الصورة الشخصية */
+  color: #ff9999;                  /* لون الأحرف/النص داخل الصورة */
+  border: none;                    /* إزالة الحدود الافتراضية للزر */
+  font-weight: bold;               /* سمك الخط عريض */
+  cursor: pointer;                 /* تغيير شكل المؤشر إلى يد عند الوقوف عليه */
+  display: flex;                   /* لتوسيط النص داخل الزر */
+  align-items: center;             /* توسيط رأسي */
+  justify-content: center;        /* توسيط أفقي */
+}
+
+.icon-btn {
+  background-color: transparent; /* خلفية شفافة */
+  border: none;                  /* إزالة الحدود */
+  color: var(--text-main);       /* لون الأيقونة */
+  width: 40px;                   /* العرض */
+  height: 40px;                  /* الارتفاع */
+  border-radius: 50%;            /* جعل الزر دائريًا */
+  font-size: 18px;               /* حجم الأيقونة */
+  cursor: pointer;               /* مؤشر اليد */
+  display: flex;                 /* لتوسيط الأيقونة */
+  align-items: center;           /* توسيط رأسي */
+  justify-content: center;      /* توسيط أفقي */
+}
+.icon-btn:hover {
+  background-color: var(--hover-bg); /* تغيير خلفية الزر عند التمرير عليه */
+}
+
+.create-btn {
+  background-color: var(--chip-bg); /* لون الخلفية */
+  border: none;                    /* إزالة الحدود */
+  color: var(--text-main);         /* لون النص */
+  height: 36px;                    /* الارتفاع */
+  padding: 0 14px;                 /* مسافة داخلية جانبية 14px */
+  border-radius: 18px;             /* حواف منحنية بشكل حبة الدواء (Pill-shape) */
+  display: flex;                   /* لترتيب الأيقونة والنص بجانب بعضهما */
+  align-items: center;             /* محاذاة عمودية */
+  gap: 8px;                        /* مسافة بين الأيقونة والنص */
+  cursor: pointer;                 /* مؤشر اليد */
+  font-size: 14px;                 /* حجم الخط */
+  font-weight: 500;                /* سمك الخط متوسط */
+}
+
+.create-btn:hover {
+  background-color: var(--hover-bg); /* تغيير الخلفية عند التمرير */
+}
+
+/* الوسط (البحث والمايك) */
+/* الوسط (البحث والمايك) */
+.center-section {
+  flex: 1;                     /* يأخذ أقصى مساحة متاحة له في المنتصف */
+  max-width: 720px;            /* أقصى عرض مسموح به 720 بكسل */
+  justify-content: flex-end;   /* لمحاذاة المحتوى للطرف الأيمن/الخلفي */
+  margin: 0 20px;              /* هامش 20px على اليمين واليسار */
+}
+
+.search-box {
+  display: flex;                   /* وضع الإدخال والأزرار بجانب بعضها */
+  align-items: center;             /* محاذاة عمودية */
+  background-color: #121212;       /* لون الخلفية الداكن */
+  border: 1px solid var(--border-color); /* إطار رقيق بحسب المتغير */
+  border-radius: 40px;             /* حواف دائرية بأسلوب يوتيوب الحديث */
+  overflow: hidden;                /* قص أي عنصر داخلي يخرج عن الحواف الدائرية */
+  width: 100%;                     /* أخذ كامل العرض المتاح */
+  max-width: 600px;                /* أقصى عرض لصندوق البحث */
+  height: 40px;                    /* ارتفاع صندوق البحث */
+}
+
+.search-box input {
+  background: transparent;   /* خلفية شفافة ليعرض خلفية الحاوية */
+  border: none;              /* إزالة حدود حقل الإدخال */
+  color: var(--text-main);   /* لون نص الكتابة */
+  padding: 0 12px;           /* مسافة داخلية جانبية */
+  width: 100%;               /* أخذ باقي العرض المتاح داخل الحاوية */
+  font-size: 16px;           /* حجم خط الكتابة */
+  outline: none;             /* إزالة الإطار الأزرق/الأسود الافتراضي عند التركيز */
+  text-align: right;         /* جعل نص الكتابة يبدأ من اليمين (لغة عربية) */
+}
+
+.keyboard-btn {
+  background: transparent;   /* خلفية شفافة */
+  border: none;              /* إزالة الحدود */
+  color: var(--text-sub);     /* لون أيقونة لوحة المفاتيح */
+  cursor: pointer;           /* مؤشر اليد */
+  padding: 0 8px;            /* مسافة داخلية جانبية */
+  font-size: 16px;           /* حجم أيقونة الكيبورد */
+}
+
+.search-btn {
+  background-color: var(--secondary-bg);  /* لون خلفية زر العدسة */
+  border: none;                           /* إزالة الحدود */
+  border-left: 1px solid var(--border-color); /* فاصل خطي على اليسار */
+  color: var(--text-main);                /* لون الأيقونة */
+  width: 64px;                            /* عرض زر البحث */
+  height: 100%;                           /* أخذ كامل ارتفاع الحاوية (40px) */
+  cursor: pointer;                        /* مؤشر اليد */
+  font-size: 16px;                        /* حجم الأيقونة */
+  display: flex;                          /* للتوسيط */
+  align-items: center;                    /* توسيط رأسي */
+  justify-content: center;               /* توسيط أفقي */
+}
+
+.search-btn:hover {
+  background-color: #272727; /* تغيير الخلفية للون أفتح قليلاً عند التمرير */
+}
+
+.voice-btn {
+  background-color: var(--secondary-bg); /* لون خلفية زر البحث الصوتي */
+  flex-shrink: 0;             /* منع تقليص حجم الزر إذا ضاقت الشاشة */
+}
+
+/* ==================== 2. Categories             Bar ==================== */
+/* ==================== 2. Categories Bar ==================== */
+.categories-bar {
+  display: flex;              /* عرض التصنيفات بجانب بعضها أفقيًا */
+  gap: 12px;                  /* مسافة 12px بين كل تصنيف والآخر */
+  padding: 12px 16px;         /* مسافات داخلية للمحيط */
+  overflow-x: auto;           /* تفعيل التمرير الأفقي إذا زادت العناصر */
+  white-space: nowrap;        /* منع نزول الأزرار لسطر جديد */
+  background-color: var(--bg-color); /* لون الخلفية */
+  scrollbar-width: none;      /* إخفاء شريط التمرير (خاص بمتصفح Firefox) */
+}
+
+.categories-bar::-webkit-scrollbar {
+  display: none; /* إخفاء شريط التمرير (خاص بمتصفحات Chrome و Safari و Edge) */
+}
+
+.chip {
+  background-color: var(--chip-bg); /* لون خلفية الزر */
+  color: var(--text-main);         /* لون النص */
+  border: none;                    /* إزالة الحدود */
+  padding: 8px 12px;               /* مسافات داخلية */
+  border-radius: 8px;              /* حواف منحنية قليلاً */
+  font-size: 14px;                 /* حجم الخط */
+  font-weight: 500;                /* سمك الخط */
+  cursor: pointer;                 /* مؤشر اليد */
+  transition: background-color 0.2s; /* إضافة حركة انسيابية للون عند التمرير */
+  flex-shrink: 0;                  /* منع انكماش العرض للحفاظ على النص كاملاً */
+}
+
+.chip:hover {
+  background-color: var(--hover-bg); /* لون زر التصنيف عند الوقوف عليه */
+}
+
+.chip.active {
+  background-color: var(--text-main); /* خلفية بيضاء للتصنيف النشط حاليًا */
+  color: var(--bg-color);            /* خط داكن للتصنيف النشط */
+}
+
+/* ==================== 3. Video Grid ==================== */
+/* ==================== 3. Video Grid ==================== */
+.video-grid {
+  display: grid;                                       /* استخدام نظام الشبكة CSS Grid */
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* تقسيم تلقائي للأعمدة بحجم أدنى 320px */
+  gap: 16px;                                           /* المسافة بين كروت الفيديوهات */
+  padding: 16px;                                       /* حواف داخلية للشبكة */
+}
+
+.video-card {
+  display: flex;          /* تحويل الكرت ونظامه لـ Flex */
+  flex-direction: column; /* ترتيب صورة الفيديو والمعلومات عموديًا فوق بعض */
+  cursor: pointer;        /* مؤشر اليد */
+}
+
+.thumbnail-container {
+  position: relative;     /* لتحديد موقع زر مدة الفيديو الداخلي بداخلها */
+  width: 100%;            /* العرض الكامل */
+  aspect-ratio: 16 / 9;   /* الحفاظ على نسبة أبعاد الفيديو القياسية (16:9) */
+  border-radius: 12px;    /* حواف منحنية للصورة */
+  overflow: hidden;       /* قص الصورة من الحواف المنحنية */
+  background-color: #222; /* لون رمادي مؤقت لحين تحميل الصورة */
+}
+
+.thumbnail-container img {
+  width: 100%;          /* تغطية عرض الحاوية بالكامل */
+  height: 100%;         /* تغطية ارتفاع الحاوية بالكامل */
+  object-fit: cover;    /* تكييف الصورة لتغطي المساحة دون تمطيط أو تشويه */
+}
+
+.duration {
+  position: absolute;                  /* تجميع عنصر وقت الفيديو في مكان محدد */
+  bottom: 8px;                         /* الابتعاد 8px عن الأسفل */
+  left: 8px;                           /* الابتعاد 8px عن اليسار */
+  background-color: rgba(0, 0, 0, 0.8);/* خلفية سوداء شبه شفافة */
+  color: #fff;                         /* لون النص أبيض */
+  font-size: 12px;                     /* حجم خط الوقت */
+  padding: 3px 4px;                    /* مسافة داخلية */
+  border-radius: 4px;                  /* حواف دائرية بسيطة */
+  font-weight: 500;                    /* سمك الخط */
+}
+
+.video-info {
+  display: flex;       /* وضع صورة القناة والمعلومات بجانب بعضهما */
+  gap: 12px;          /* المسافة بين الصورة الشخصية وتفاصيل الفيديو */
+  margin-top: 12px;   /* المسافة الفاصلة فوقها (بين الصورة والمعلومات) */
+  position: relative; /* لتحديد موقع زر الخيارات "..." بالنسبة للمعلومات */
+}
+
+.channel-avatar img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.video-details {
+  display: flex;          /* نظام flex */
+  flex-direction: column; /* ترتيب العنوان، اسم القناة، المشاهدات تحت بعضها */
+  gap: 4px;               /* مسافة 4px بين عناصر التفاصيل */
+  padding-left: 24px;     /* مسافة إضافية يسارًا لتترك مساحة لزر الخيارات الثلاث نقاط */
+}
+.video-title {
+  font-size: 14px;         /* حجم عنوان الفيديو */
+  font-weight: 600;        /* خط عريض نسبيًا */
+  line-height: 1.4;        /* ارتفاع السطر لإعطاء مساحة مريحة للقراءة */
+  color: var(--text-main); /* لون النص الرئيسي */
+  display: -webkit-box;    /* طريقة للعرض للتحكم في عدد الأسطر */
+  -webkit-box-orient: vertical; /* تحديد اتجاه صندوق النص ليكون عموديًا */
+  overflow: hidden;        /* إخفاء النص الزائد الذي يتجاوز الأسطر */
+}
+
+.channel-name, .video-stats {
+  font-size: 12px;       /* حجم الخط لاسم القناة والإحصائيات */
+  color: var(--text-sub); /* لون رمادي فاتح بحسب المتغير */
+}
+
+.check-icon {
+  font-size: 10px;    /* حجم أصلغر لأيقونة التوثيق (صح) */
+  margin-right: 4px;  /* مسافة من جهة اليمين */
+}
+
+.options-btn {
+  position: absolute;      /* تثبيت الزر في مكان محدد من حاوية `.video-info` */
+  left: 0;                 /* تثبيته في أقصى اليسار */
+  top: 0;                  /* تثبيته في الأعلى */
+  background: transparent;/* خلفية شفافة */
+  border: none;           /* إزالة الحدود */
+  color: var(--text-main);/* لون الأيقونة (الثلاث نقاط) */
+  font-size: 16px;        /* حجم الأيقونة */
+  cursor: pointer;        /* مؤشر اليد */
+}

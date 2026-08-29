@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap');
+
+:root{
+  --bg: #0b0f0e;
+  --card: #14201d;
+  --card-border: #223530;
+  --accent: #2dd4bf;
+  --accent-glow: rgba(45, 212, 191, 0.35);
+  --text: #f2f5f4;
+  --text-dim: #9fb0ac;
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin:0;
+  min-height:100vh;
+  background: var(--bg);
+  font-family:'Cairo', sans-serif;
+  color: var(--text);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding: 40px 20px;
+}
+
+h1{
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 28px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  width: 100%;
+  max-width: 380px;
+}
+
+.card{
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  padding: 26px 12px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap: 14px;
+  cursor:pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease, background .15s ease;
+}
+
+.card svg{
+  width: 30px;
+  height: 30px;
+  stroke: var(--text);
+  transition: stroke .15s ease, filter .15s ease;
+}
+
+.card span{
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.card:hover{
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent-glow), 0 8px 24px -8px var(--accent-glow);
+}
+
+.card:active{
+  transform: translateY(0px) scale(.97);
+}
+
+.card.active{
+  background: linear-gradient(160deg, #16302c, #0f211d);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent-glow), 0 8px 24px -6px var(--accent-glow);
+}
+
+.card.active svg{
+  stroke: var(--accent);
+  filter: drop-shadow(0 0 6px var(--accent-glow));
+}
+
+.card.active span{
+  color: var(--accent);
+}
+
+/* Panel that opens on click */
+.panel{
+  width: 100%;
+  max-width: 380px;
+  margin-top: 20px;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  padding: 20px;
+  display:none;
+  animation: slideIn .25s ease;
+}
+
+.panel.show{ display:block; }
+
+@keyframes slideIn{
+  from{ opacity:0; transform: translateY(-8px); }
+  to{ opacity:1; transform: translateY(0); }
+}
+
+.panel-title{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:800;
+  font-size:16px;
+  color: var(--accent);
+  margin-bottom:8px;
+}
+
+.panel-text{
+  color: var(--text-dim);
+  font-size:14px;
+  line-height:1.8;
+}

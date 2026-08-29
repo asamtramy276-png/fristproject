@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="StyleYouTube1.CSS">
+</head>
+<body>
+
+  <header class="yt-header">
+    
+    <div class="header-section center-section">
+      
+      
+      <div class="search-box">
+        
+        <button class="keyboard-btn" title="لوحة المفاتيح">
+          <i class="fa-regular fa-keyboard"></i>
+        </button>
+        
+        <input type="text" placeholder="بحث">
+
+        <button class="search-btn" title="بحث">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+
+        <button class="icon-btn voice-btn" title="البحث بالصوت">
+        <i class="fa-solid fa-microphone"></i>
+        
+      </button>
+      
+      </div>
+    
+
+    <div class="header-section left-section">
+      
+      <button class="A-create">
+        <i class="fa-solid fa-plus"></i>
+        <span>إنشاء</span>
+      </button>
+      
+<button class="icon-btn" title="الإشعارات">
+        <i class="fa-regular fa-bell"></i>
+      </button>
+
+      <button class="avatar-btn" title="الحساب">
+        <span class="avatar-letter">O</span>
+      </button>
+    </div>
+
+  </header>
+
+  <nav class="categories-bar">
+    <button class="chip active">محتوى جديد لك</button>
+    <button class="chip">فيديوهات محملة مؤخرًا</button>
+    <button class="chip">ألعاب فيديو رياضية</button>
+    <button class="chip">كرة القدم</button>
+    <button class="chip">ألعاب مغامرات وحركة</button>
+    <button class="chip">رسوم متحركة</button>
+    <button class="chip">مباشر</button>
+    <button class="chip">ميكسات</button>
+    <button class="chip">بودكاست</button>
+    <button class="chip">موسيقى</button>
+  </nav>
+
+  <main class="video-grid">
+    
+    <div class="video-card">
+      <div class="thumbnail-container">
+        <img src="https://via.placeholder.com/360x202/111/fff?text=Quran" alt="صورة الفيديو">
+        <span class="duration">1:40:14</span>
+      </div>
+      <div class="video-info">
+        <div class="channel-avatar">
+          <img src="https://via.placeholder.com/36/333/fff?text=Q" alt="القناة">
+        </div>
+        <div class="video-details">
+          <h3 class="video-title">قرآن الصباح... أجمل ما تبدأ به يومك لصاحب الحجرة الذهبية الشيخ محمد صديق المنشاوي</h3>
+          <p class="channel-name">Naqaa Quran - نقاء</p>
+          <p class="video-stats">715 ألف مشاهدة • قبل 6 أشهر</p>
+        </div>
+        <button class="options-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <div class="thumbnail-container">
+        <img src="https://via.placeholder.com/360x202/222/fff?text=Anime" alt="صورة الفيديو">
+        <span class="duration">1:04:08</span>
+      </div>
+      <div class="video-info">
+        <div class="channel-avatar">
+          <img src="https://via.placeholder.com/36/444/fff?text=S" alt="القناة">
+        </div>
+        <div class="video-details">
+          <h3 class="video-title">أقوي مقاتل في العالم بيرجع من تاني بعد ما غدروا بيه ليثبت أنه الأعظم في تاريخ البشريه 😎 || ملخص كامل</h3>
+          <p class="channel-name">شادو - SHADOW <i class="fa-solid fa-circle-check check-icon"></i></p>
+          <p class="video-stats">2.1 مليون مشاهدة • قبل شهرين</p>
+        </div>
+        <button class="options-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+      </div>
+    </div>
+
+  </main>
+
+
+        </body>
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Web - Full Edition</title>
+    <!-- FontAwesome الأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- ربط ملف الـ CSS المنفصل -->
+    <link rel="stylesheet" href="Spotify.css">
+</head>
+<body>
+
+    <!-- Main Web Layout App Structure -->
+    <div class="app-container">
+        
+        <!-- LEFT SIDEBAR CONTAINER -->
+        <aside class="sidebar" id="main-sidebar">
+            <div class="nav-section">
+                <div class="brand-logo">
+                    <i class="fa-brands fa-spotify"></i>
+                    <span>Spotify</span>
+                </div>
+                <div class="nav-item active" id="nav-home" onclick="navigateTo('home')">
+                    <i class="fa-solid fa-house"></i>
+                    <span>الرئيسية</span>
+                </div>
+                <div class="nav-item" id="nav-search" onclick="navigateTo('search')">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>البحث</span>
+                </div>
+                <div class="nav-item" id="nav-radio" onclick="navigateTo('radio')">
+                    <i class="fa-solid fa-radio"></i>
+                    <span>الراديو</span>
+                </div>
+            </div>
+
+            <div class="library-section">
+                <div class="library-header">
+                    <div class="lib-title">
+                        <i class="fa-solid fa-book"></i>
+                        <span>مكتبتك</span>
+                    </div>
+                    <div class="lib-actions">
+                        <i class="fa-solid fa-plus" onclick="openCreatePlaylistModal()" title="إنشاء قائمة"></i>
+                        <i class="fa-solid fa-arrow-right" onclick="toggleSidebarCollapse()"></i>
+                    </div>
+                </div>
+
+                <div class="library-filters">
+                    <span class="chip-sm active" onclick="filterLibrary('all')">القوائم</span>
+                    <span class="chip-sm" onclick="filterLibrary('artists')">الفنانين</span>
+                    <span class="chip-sm" onclick="filterLibrary('albums')">الألبومات</span>
+                </div>
+
+                <div class="playlist-scroll" id="sidebar-playlists">
+                    <!-- Item 1 -->
+                    <div class="playlist-card" data-id="101" onclick="loadPlaylistView(101)">
+                        <img src="https://picsum.photos/100/100?random=1" alt="Cover">
+                        <div class="playlist-meta">
+                            <div class="playlist-name">أغاني أعجبتني</div>
+                            <div class="playlist-sub">قائمة تشغيل • 45 أغنية</div>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="playlist-card" data-id="102" onclick="loadPlaylistView(102)">
+                        <img src="https://picsum.photos/100/100?random=2" alt="Cover">
+                        <div class="playlist-meta">
+                            <div class="playlist-name">أفضل أغاني الـ 90s</div>
+                            <div class="playlist-sub">قائمة تشغيل • Spotify</div>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="playlist-card" data-id="103" onclick="loadPlaylistView(103)">
+                        <img src="https://picsum.photos/100/100?random=3" alt="Cover">
+                        <div class="playlist-meta">
+                            <div class="playlist-name">عمرو دياب - الكلاسيكيات</div>
+                            <div class="playlist-sub">فنان</div>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="playlist-card" data-id="104" onclick="loadPlaylistView(104)">
+                        <img src="https://picsum.photos/100/100?random=4" alt="Cover">
+                        <div class="playlist-meta">
+                            <div class="playlist-name">موسيقى هادئة للتركيز</div>
+                            <div class="playlist-sub">قائمة تشغيل • أدوات عمل</div>
+                        </div>
+                    </div>
+                    <!-- Item 5 -->
+                    <div class="playlist-card" data-id="105" onclick="loadPlaylistView(105)">
+                        <img src="https://picsum.photos/100/100?random=5" alt="Cover">
+                        <div class="playlist-meta">
+                            <div class="playlist-name">بودكاست فنجان</div>
+                            <div class="playlist-sub">بودكاست • 120 حلقة</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- CENTER MAIN CONTENT CONTAINER -->
+        <main class="main-view" id="main-view">
+            <!-- Header Bar -->
+            <header class="top-bar">
+                <div class="navigation-history-btns">
+                    <button class="icon-btn" onclick="historyBack()"><i class="fa-solid fa-chevron-right"></i></button>
+                    <button class="icon-btn" onclick="historyForward()"><i class="fa-solid fa-chevron-left"></i></button>
+                </div>
+
+                <div class="search-bar-wrapper" id="top-search-bar" style="display: none;">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="ماذا تريد أن تسمع؟" id="search-input" oninput="executeSearch(this.value)">
+                </div>
+
+                <div class="user-menu-wrapper">
+                    <button class="btn-premium" onclick="navigateTo('premium')">استكشف Premium</button>
+                    <button class="btn-install" onclick="installApp()"><i class="fa-solid fa-circle-down"></i> تثبيت التطبيق</button>
+                    <div class="user-avatar" onclick="toggleUserDropdown()">
+                        <img src="https://picsum.photos/40/40?random=99" alt="User">
+                    </div>
+                </div>
+            </header>
+
+            <!-- Category Chips Section -->
+            <section class="filter-chips">
+                <button class="chip active" onclick="filterCategory('all', this)">الكل</button>
+                <button class="chip" onclick="filterCategory('music', this)">الموسيقى</button>
+                <button class="chip" onclick="filterCategory('podcast', this)">البودكاست</button>
+                <button class="chip" onclick="filterCategory('audiobooks', this)">الكتب الصوتية</button>
+            </section>
+
+            <!-- Dynamic Views (Sections) -->
+            <div id="dynamic-content-area">
+                
+                <!-- Section 1: Top Quick Grid -->
+                <section class="section-block">
+                    <h2 class="section-heading">مساء الخير</h2>
+                    <div class="quick-grid">
+                        <div class="quick-card" onclick="playTrack(1)">
+                            <img src="https://picsum.photos/80/80?random=11">
+                            <span>أغاني أعجبتني</span>
+                            <div class="quick-play-btn"><i class="fa-solid fa-play"></i></div>
+                        </div>
+                        <div class="quick-card" onclick="playTrack(2)">
+                            <img src="https://picsum.photos/80/80?random=12">
+                            <span>تامر حسني - 180 درجة</span>
+                            <div class="quick-play-btn"><i class="fa-solid fa-play"></i></div>
+                        </div>
+                        <div class="quick-card" onclick="playTrack(3)">
+                            <img src="https://picsum.photos/80/80?random=13">
+                            <span>أفضل أغاني الـ Pop</span>
+                            <div class="quick-play-btn"><i class="fa-solid fa-play"></i></div>
+                        </div>
+                        <div class="quick-card" onclick="playTrack(4)">
+                            <img src="https://picsum.photos/80/80?random=14">
+                            <span>كوكتيل اليوم</span>
+                            <div class="quick-play-btn"><i class="fa-solid fa-play"></i></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 2: Cards Carousel/Grid -->
+                <section class="section-block">
+                    <div class="section-header-flex">
+                        <h2 class="section-heading">محطاتك المفضلة</h2>
+                        <span class="see-all" onclick="showAll('suggested')">إظهار الكل</span>
+                    </div>
+                    <div class="cards-grid" id="suggested-grid">
+                        <!-- Card 1 -->
+                        <div class="music-card" onclick="playTrack(1)">
+                            <div class="card-img-container">
+                                <img src="https://picsum.photos/200/200?random=21">
+                                <button class="card-play-btn"><i class="fa-solid fa-play"></i></button>
+                            </div>
+                            <div class="card-title">180° - تامر حسني</div>
+                            <div class="card-desc">تامر حسني، حسام حبيب وشيرين</div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="music-card" onclick="playTrack(2)">
+                            <div class="card-img-container">
+                                <img src="https://picsum.photos/200/200?random=22">
+                                <button class="card-play-btn"><i class="fa-solid fa-play"></i></button>
+                            </div>
+                            <div class="card-title">يا ساحر</div>
+                            <div class="card-desc">عمرو دياب • الألبوم الجديد</div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="music-card" onclick="playTrack(3)">
+                            <div class="card-img-container">
+                                <img src="https://picsum.photos/200/200?random=23">
+                                <button class="card-play-btn"><i class="fa-solid fa-play"></i></button>
+                            </div>
+                            <div class="card-title">بودكاست الفن والتصميم</div>
+                            <div class="card-desc">حلقات أسبوعية مجانية</div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="music-card" onclick="playTrack(4)">
+                            <div class="card-img-container">
+                                <img src="https://picsum.photos/200/200?random=24">
+                                <button class="card-play-btn"><i class="fa-solid fa-play"></i></button>
+                            </div>
+                            <div class="card-title">راديو تيتو بندق</div>
+                            <div class="card-desc">أجواء الحفلات والمهرجانات</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 3: Recommended Artists -->
+                <section class="section-block">
+                    <div class="section-header-flex">
+                        <h2 class="section-heading">فنانون مقترحون</h2>
+                    </div>
+                    <div class="cards-grid">
+                        <div class="music-card artist-card" onclick="openArtistPage(1)">
+                            <div class="card-img-container">
+                                <img src="https://picsum.photos/200/200?random=31" class="rounded-img">
+                                <button class="card-play-btn"><i class="fa-solid fa-play"></i></button>
+                            </div>
+                            <div class="card-title">عمرو دياب</div>
+                            <div class="card-desc">فنان</div>
+                        </div>
+                        <div class="music-card artist-card" onclick="openArtistPage(2)">
+                            <div class="card-img-container">
+                                <img src="https://picsum.photos/200/200?random=32" class="rounded-img">
+                                <button class="card-play-btn"><i class="fa-solid fa-play"></i></button>
+                            </div>
+                            <div class="card-title">تامر حسني</div>
+                            <div class="card-desc">فنان</div>
+                        </div>
+                        <div class="music-card artist-card" onclick="openArtistPage(3)">
+                            <div class="card-img-container">
+                                <img src="https://picsum.photos/200/200?random=33" class="rounded-img">
+                                <button class="card-play-btn"><i class="fa-solid fa-play"></i></button>
+                            </div>
+                            <div class="card-title">أنغام</div>
+                            <div class="card-desc">فنانة</div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+
+        <!-- RIGHT SIDEBAR (NOW PLAYING VIEW) -->
+        <aside class="right-panel" id="right-panel">
+            <div class="panel-header">
+                <h3>يعزف الآن</h3>
+                <i class="fa-solid fa-xmark" onclick="toggleRightPanel()"></i>
+            </div>
+            <div class="panel-content">
+                <img src="https://picsum.photos/300/300?random=1" id="panel-cover" class="panel-cover">
+                <div class="panel-track-info">
+                    <h2 id="panel-title">اختر أغنية</h2>
+                    <p id="panel-artist">الفنان</p>
+                </div>
+                <div class="artist-about-card">
+                    <img src="https://picsum.photos/300/150?random=88" class="artist-bg">
+                    <h4>نبذة عن الفنان</h4>
+                    <p id="artist-bio">اختر أغنية للاستماع لمعلومات الفنان والتفاصيل.</p>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- MAIN FOOTER AUDIO PLAYER BAR -->
+    <footer class="player-bar">
+        <!-- Track Details Left -->
+        <div class="player-left">
+            <img src="https://picsum.photos/60/60?random=1" id="player-cover">
+            <div class="track-meta">
+                <div id="player-title" class="title">لم يتم التشغيل</div>
+                <div id="player-artist" class="artist">--</div>
+            </div>
+            <button class="btn-like" onclick="toggleFavorite()"><i class="fa-regular fa-heart" id="like-btn-icon"></i></button>
+        </div>
+
+        <!-- Central Player Controls -->
+        <div class="player-center">
+            <div class="control-buttons">
+                <button class="btn-ctrl" title="خلط" onclick="toggleShuffle()"><i class="fa-solid fa-shuffle" id="shuffle-icon"></i></button>
+                <button class="btn-ctrl" title="السابق" onclick="prevSong()"><i class="fa-solid fa-backward-step"></i></button>
+                <button class="btn-ctrl play-main" title="تشغيل" onclick="togglePlay()"><i class="fa-solid fa-play" id="main-play-icon"></i></button>
+                <button class="btn-ctrl" title="التالي" onclick="nextSong()"><i class="fa-solid fa-forward-step"></i></button>
+                <button class="btn-ctrl" title="تكرار" onclick="toggleRepeat()"><i class="fa-solid fa-repeat" id="repeat-icon"></i></button>
+            </div>
+            <div class="timeline-wrapper">
+                <span id="current-time">0:00</span>
+                <div class="progress-bar-bg" onclick="seekAudio(event)">
+                    <div class="progress-bar-fill" id="progress-fill"></div>
+                </div>
+                <span id="total-duration">0:00</span>
+            </div>
+        </div>
+
+        <!-- Volume & Right Features Controls -->
+        <div class="player-right">
+            <button class="btn-ctrl" title="كلمات الأغنية"><i class="fa-solid fa-microphone"></i></button>
+            <button class="btn-ctrl" title="قائمة الانتظار"><i class="fa-solid fa-bars"></i></button>
+            <button class="btn-ctrl" title="صوت" onclick="toggleMute()"><i class="fa-solid fa-volume-high" id="volume-icon"></i></button>
+            <input type="range" class="volume-range" min="0" max="100" value="100" id="volume-slider" oninput="changeVolume(this.value)">
+        </div>
+    </footer>
+
+    <!-- MOBILE NAVIGATION BOTTOM FIXTURE -->
+    <nav class="mobile-bottom-nav">
+        <div class="mobile-nav-item active" onclick="navigateTo('home')">
+            <i class="fa-solid fa-house"></i>
+            <span>الرئيسية</span>
+        </div>
+        <div class="mobile-nav-item" onclick="navigateTo('search')">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>البحث</span>
+        </div>
+        <div class="mobile-nav-item" onclick="navigateTo('library')">
+            <i class="fa-solid fa-book"></i>
+            <span>مكتبتك</span>
+        </div>
+        <div class="mobile-nav-item" onclick="navigateTo('premium')">
+            <i class="fa-solid fa-gem"></i>
+            <span>Premium</span>
+        </div>
+    </nav>
+
+    <!-- HIDDEN AUDIO ENGINE -->
+    <audio id="main-audio-engine"></audio>
+
+    <!-- ربط ملف الـ JavaScript المنفصل -->
+    <script src="script.js"></script>
+</body>
+</html>

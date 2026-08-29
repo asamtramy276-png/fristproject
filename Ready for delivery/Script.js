@@ -75,7 +75,7 @@
 //     alert("الرجاء إدخال سن صحيح!");
 // }
 
-
+alert("مرحبنا بك في  موقعي المتواضع")
 
 function osama(){
     let age = Number(document.getElementById("ageInput").value);

@@ -69,7 +69,7 @@ body {
     overflow: hidden;
 }
 
-.A-image img {
+video {
     width: 100%; 
     height: 100%;
     object-fit: cover;

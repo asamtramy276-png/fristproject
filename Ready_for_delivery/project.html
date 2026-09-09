@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+     
+<header>
+    <h2><a href="#" class="logo">nouvil</a></h2>
+<ul>
+    <li> <a href="#" class="active">Home</a></li>
+    <li> <a href="#">Product</a></li>
+    <li> <a href="#">Shop</a></li>
+    <li> <a href="#">About</a></li>
+    <li> <a href="#">Contact</a></li>
+</ul>
+</header>
+
+<section class="main">
+
+    <img src="https://nouvil.net/wp-content/uploads/2022/01/stars1-1024x576.png" id="Starts">
+    <h2 class="nouvil">nouvil</h2>
+    <img src="https://nouvil.net/wp-content/uploads/2022/01/moon2-1024x576.png.webp" id="Moon">
+    <img src="https://nouvil.net/wp-content/uploads/2022/01/mountains3-1024x576.png.webp" id="Mountains3">
+    <img src="https://nouvil.net/wp-content/uploads/2022/01/mountains4-1024x576.png.webp" id="Mountains4">
+    <img src="https://nouvil.net/wp-content/uploads/2022/01/river5-1024x576.png.webp" id="River">
+    <img src="https://nouvil.net/wp-content/uploads/2022/01/boat6-1024x576.png.webp" id="boat">
+    <img src="https://nouvil.net/wp-content/uploads/2022/01/mountains7-1024x576.png.webp" id="Mountains7">
+
+</section>
+
+
+<div class="content">
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, quis dignissimos et deserunt, ab, vel doloribus ut nisi porro numquam debitis optio quaerat ex qui consequatur? Sapiente tempora alias praesentium ut fuga non saepe, iure ipsam, exercitationem, tempore id ratione! Excepturi dolores quia aliquam assumenda saepe eaque, doloribus quam officia vero laudantium omnis nostrum qui. Deleniti odit magni aperiam velit rerum soluta veritatis est distinctio voluptatum dignissimos consectetur, vero, doloribus quam reprehenderit harum illo! Repudiandae, amet beatae, neque similique iusto quibusdam odit impedit eum magnam, rem deleniti deserunt in cum ex incidunt ipsum. Architecto, ratione error laboriosam voluptatem dicta modi? </p><br>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, quis dignissimos et deserunt, ab, vel doloribus ut nisi porro numquam debitis optio quaerat ex qui consequatur? Sapiente tempora alias praesentium ut fuga non saepe, iure ipsam, exercitationem, tempore id ratione! Excepturi dolores quia aliquam assumenda saepe eaque, doloribus quam officia vero laudantium omnis nostrum qui. Deleniti odit magni aperiam velit rerum soluta veritatis est distinctio voluptatum dignissimos consectetur, vero, doloribus quam reprehenderit harum illo! Repudiandae, amet beatae, neque similique iusto quibusdam odit impedit eum magnam, rem deleniti deserunt in cum ex incidunt ipsum. Architecto, ratione error laboriosam voluptatem dicta modi? </p><br>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, quis dignissimos et deserunt, ab, vel doloribus ut nisi porro numquam debitis optio quaerat ex qui consequatur? Sapiente tempora alias praesentium ut fuga non saepe, iure ipsam, exercitationem, tempore id ratione! Excepturi dolores quia aliquam assumenda saepe eaque, doloribus quam officia vero laudantium omnis nostrum qui. Deleniti odit magni aperiam velit rerum soluta veritatis est distinctio voluptatum dignissimos consectetur, vero, doloribus quam reprehenderit harum illo! Repudiandae, amet beatae, neque similique iusto quibusdam odit impedit eum magnam, rem deleniti deserunt in cum ex incidunt ipsum. Architecto, ratione error laboriosam voluptatem dicta modi? </p><br>
+
+
+</div>
+
+
+<Style>
+  *{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: linear-gradient(#200016,#10001f);
+    height: 100vh;
+    font-family: system-ui;
+}
+
+a{
+    text-decoration: none;
+    color:#fff;
+
+}
+
+header{
+    position: fixed;
+    width: 95%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+}
+
+header .logo{
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style:none;
+
+
+}
+
+header ul li {
+    margin: 30px;
+}
+
+header ul li a{
+    padding: 6px 15px;
+    border-radius: 20px;
+}
+
+header ul li a:hover ,.active{
+    background: #fff;
+    color :#200016;
+}
+
+.main{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.main::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background:linear-gradient(to top#200016,transparent) ;
+}
+
+.main img{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;   
+}
+
+#Moon{
+    mix-blend-mode: screen;
+    transform: translateY(80px);
+}
+.nouvil{
+    color:#fff;
+    font-size: 25px;
+    text-transform: uppercase;
+    transform: translateY(-140px);
+}
+
+.content{
+    color: #fff;
+    padding: 30px;
+}
+
+.content h2{
+    margin: 20px;
+    font-size: 30px;
+}
+
+.content p{
+    margin: 20px;
+}
+</Style>
+
+
+<script>
+  
+let starts = document.getElementById('Starts');
+let Moon = document.getElementById('Moon');
+let Mountains3 = document.getElementById('Mountains3');
+let Mountains4 = document.getElementById('Mountains4');
+let River = document.getElementById('River');
+let boat = document.getElementById('boat');
+let nouvil = document.querySelector('.nouvil');
+
+window.onscroll = function() {
+    let value = scrollY;
+    
+    Moon.style.top = value * 4 + 'px'; 
+    Mountains3.style.top = value * 2 + 'px'; 
+    Mountains4.style.top = value * 1.5 + 'px'; 
+    River.style.top = value + 'px'; 
+    boat.style.top = value + 'px'; 
+    boat.style.left = value * 3 + 'px';
+    nouvil.style.fontSize = value + 'px'; 
+
+    
+    if (value >= 67) {
+        nouvil.style.fontSize = 67 + 'px'; 
+        nouvil.style.position = 'fixed';
+        
+        if (value >= 478) {
+            nouvil.style.display = 'none';
+        } else {
+            nouvil.style.display = 'block';
+        }
+    } 
+
+   
+    if (value >= 127) {
+        document.querySelector('.main').style.background = 'linear-gradient(#376281, #10001f)';
+    } else {
+        document.querySelector('.main').style.background = 'linear-gradient(#200016, #10001f)';
+    }
+}
+
+</script>
+
+    
+</body>
+</html>

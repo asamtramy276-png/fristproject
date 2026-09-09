@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="name" placeholder="الاسم">
+    <button id="welcomeBtn">أهلا بك</button>
+    <button id="validateBtn">فحص كلمة المرور / الاسم</button>
+    <h1 class="result"></h1>  
+
+    <br>
+    <hr>
+    <br>
+
+    <h1 class="text">hello world</h1>
+    <button class="darkBtn">Dark Mode</button>
+    <button class="mod">Light Mode</button>
+    <button class="Zoom_in">Zoom in</button>
+    <button class="Minimize">Minimize</button>
+
+    <script>
+
+        // تحديد العناصر
+        let input = document.querySelector("#name");
+        let result = document.querySelector(".result");
+        let welcomeBtn = document.querySelector("#welcomeBtn");
+        let validateBtn = document.querySelector("#validateBtn");
+
+        let text = document.querySelector(".text");
+        let btnDark = document.querySelector(".darkBtn");
+        let btnLight = document.querySelector(".mod");
+        let btnZoom = document.querySelector(".Zoom_in");
+        let btnMinimize = document.querySelector(".Minimize");
+
+        let currentFontSize = 32; // حجم الخط الأولي
+
+        // 1. زر أهلا بك
+        welcomeBtn.addEventListener("click", function() {
+            let name = input.value.trim();
+            if (name === "") {
+                result.textContent = "الاسم الذي أدخلته غير صحيح";
+            } else if (name === "osama") {
+                result.textContent = "أهلا يا " + name;
+            } else {
+                result.textContent = "الاسم غير معروف";
+            }
+        });
+
+        // 2. زر الفحص
+        validateBtn.addEventListener("click", function() {
+            let name = input.value;
+            if (name.length < 8) {
+                result.textContent = "الاسم قصير جداً (أقل من 8 حروف)";
+                return;
+            }
+            if (!/[A-Z]/.test(name)) {
+                result.textContent = "الاسم لازم يكون فيه حرف كبير (A-Z)";
+                return;
+            }
+            if (!/[a-z]/.test(name)) {
+                result.textContent = "الاسم لازم يكون فيه حرف صغير (a-z)";
+                return;
+            }
+            if (!/[0-9]/.test(name)) {
+                result.textContent = "الاسم لازم يكون فيه رقم (0-9)";
+                return;
+            }
+            result.textContent = "الاسم صحيح ومطابق للشروط!";
+        });
+
+        // 3. Dark Mode من الجافاسكريبت
+        btnDark.addEventListener("click", function() {
+            document.body.style.backgroundColor = "#121212";
+            document.body.style.color = "#ffffff";
+        });
+
+        // 4. Light Mode من الجافاسكريبت
+        btnLight.addEventListener("click", function() {
+            document.body.style.backgroundColor = "#ffffff";
+            document.body.style.color = "#000000";
+        });
+
+        // 5. Zoom In من الجافاسكريبت
+        btnZoom.addEventListener("click", function() {
+            currentFontSize += 4;
+            text.style.fontSize = currentFontSize + "px";
+        });
+
+        // 6. Minimize من الجافاسكريبت
+        btnMinimize.addEventListener("click", function() {
+            if (currentFontSize > 12) {
+                currentFontSize -= 4;
+                text.style.fontSize = currentFontSize + "px";
+            }
+        });
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,514 @@
+/* Start Variabels */
+
+:root {
+    --main-color: #10cab7; /* اللون الرئيسي للتصميم (تركواز) */
+    --secondary-color: #2c4755; /* اللون الثانوي للتصميم (كحلي/رمادي داكن) */
+    --section-padding: 60px; /* الهامش الداخلي الموحد للأقسام من الأعلى والأسفل */
+    --section-backgrund: #f6f6f6; /* لون الخلفية الموحد للأقسام (رمادي فاتح) */
+}
+
+/* End Variabels */
+
+/* Start Global Rules */
+
+* {
+    box-sizing: border-box; /* تضمين الحواف والمسافات الداخلية ضمن الحجم الإجمالي للعنصر */
+    -webkit-box-sizing: border-box; /* دعم الخاصية لمتصفحات كروم وسفاري القديمة */
+    -moz-box-sizing: border-box; /* دعم الخاصية لمتصفح فايرفوكس القديم */
+}
+
+html {
+    scroll-behavior: smooth; /* جعل التمرير سلسًا عند النقل عبر الروابط الداخلية */
+}
+
+body {
+    font-family: 'Work Sans', sans-serif; /* تحديد الخط الأساسي للموقع */
+}
+
+.container {
+    padding-left: 15px; /* مسافة داخلية من اليسار للحاوية */
+    padding-right: 15px; /* مسافة داخلية من اليمين للحاوية */
+    margin-left: auto; /* توسط الحاوية أفقياً */
+    margin-right: auto; /* توسط الحاوية أفقياً */
+}
+
+/* small */
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px; /* عرض الحاوية للشاشات الصغيرة (التابلت) */
+    }
+}
+
+/* Medium */
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px; /* عرض الحاوية للشاشات المتوسطة (أجهزة اللابتوب) */
+    }
+}
+
+/* Large */
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px; /* عرض الحاوية للشاشات الكبيرة (الشاشات المكتبية) */
+    }
+}
+
+/* End Global Rules */
+
+/* Start Combonents */
+
+.special-heading {
+    color: #ebeced; /* لون فاتح جداً للعنوان الرئيسي للأقسام */
+    font-size: 100px; /* حجم خط ضخم جداً */
+    text-align: center; /* محاذاة النص في المنتصف */
+    font-weight: 800; /* سمك الخط عريض جداً */
+    letter-spacing: -3px; /* تقليل المسافة بين الحروف */
+    margin: 0; /* إلغاء الهوامش الخارجية */
+}
+
+.special-heading+p {
+    margin: -30px 0 0; /* سحب النص الفرعي للأعلى ليتداخل مع العنوان الضخم */
+    text-align: center; /* محاذاة النص في المنتصف */
+    color: #797979; /* لون رمادي متوسط للنص الفرعي */
+    font-size: 20px; /* حجم خط النص الفرعي */
+}
+
+@media (max-width: 767px) {
+    .special-heading {
+        font-size: 60px; /* تصغير حجم العنوان الضخم في شاشات الهواتف */
+    }
+    .special-heading+p {
+        margin-top: -20px; /* تعديل المسافة السحب في الشاشات الصغيرة */
+    }
+}
+
+/* End Combonents */
+
+/* start Header */
+
+.header {
+    position: fixed; /* تثبيت الهيدر أعلى الصفحة أثناء التمرير */
+    background: #fff; /* خلفية بيضاء للهيدر */
+    width: 100%; /* جعل عرض الهيدر بعرض الصفحة كاملاً */
+    z-index: 2; /* إظهار الهيدر فوق بقية عناصر الصفحة */
+    padding: 20px; /* مسافة داخلية للهيدر */
+}
+
+.header .container {
+    display: flex; /* جعل الحاوية مرنة لترتيب العناصر أفقياً */
+    justify-content: space-between; /* توزيع العناصر على الأطراف (الشعار يسار والقائمة يمين) */
+    align-items: center; /* محاذاة العناصر عمودياً في المنتصف */
+}
+
+.header .logo {
+    width: 60px; /* تحديد عرض الشعار */
+}
+
+.header .links {
+    position: relative; /* جعل القائمة مرجعًا لموقع القائمة المنسدلة */
+}
+
+.header .links:hover .icon span:nth-child(2) {
+    width: 100%; /* جعل الخط الأوسط يتسع للكامل عند التمرير بالماوس */
+}
+
+.header .links .icon {
+    width: 30px; /* عرض أيقونة القائمة */
+    display: flex; /* جعل الأيقونة مرنة لترتيب الخطوط */
+    justify-content: flex-end; /* محاذاة الخطوط لجهة اليمين */
+    flex-wrap: wrap; /* السماح للخطوط بالنزول لسطر جديد */
+}
+
+.header .links .icon span {
+    background-color: #333; /* لون خطوط الأيقونة (رمادي داكن) */
+    height: 2px; /* سمك الخط */
+    margin-bottom: 5px; /* المسافة بين كل خط والآخر */
+}
+
+.header .links .icon span:first-child {
+    width: 100%; /* الخط الأول بعرض كامل */
+}
+
+.header .links .icon span:nth-child(2) {
+    width: 60%; /* الخط الأوسط بعرض 60% افتراضياً */
+    transition: 0.3s; /* تأثير حركي ناعم عند تغير العرض */
+}
+
+.header .links .icon span:last-child {
+    width: 100%; /* الخط الثالث بعرض كامل */
+}
+
+.header .links ul {
+    padding: 0; /* إلغاء الحشو الافتراضي للقائمة */
+    margin: 0; /* إلغاء الهوامش الافتراضية للقائمة */
+    min-width: 200px; /* الحد الأدنى لعرض القائمة المنسدلة */
+    list-style: none; /* إلغاء النقاط الافتراضية للقائمة */
+    background-color: #f6f6f6; /* لون خلفية القائمة المنسدلة */
+    position: absolute; /* تحديد موقع مطلق للقائمة تحت الأيقونة */
+    right: 0; /* محاذاة القائمة لليمين */
+    top: calc(100% + 15px); /* موضع القائمة أسفل الأيقونة بـ 15px */
+    display: none; /* إخفاء القائمة افتراضياً */
+    z-index: 1; /* جعل القائمة تظهر فوق المحتوى أدناها */
+}
+
+.header .links:hover ul {
+    display: block; /* إظهار القائمة عند التحويم بالماوس على الأيقونة */
+}
+
+.header .links ul::before {
+    content: ''; /* عنصر وهمي لإنشاء سهم أعلي القائمة */
+    border-width: 10px; /* حجم السهم */
+    border-style: solid; /* نمط الحواف صلب */
+    border-color: transparent transparent #f6f6f6 transparent; /* إنشاء شكل مثلث يشير للأعلى */
+    position: absolute; /* تموضع مطلق للسهم */
+    top: -20px; /* وضع السهم أعلى القائمة */
+    right: 5px; /* محاذاة السهم لليمين */
+}
+
+.header .links ul li a {
+    display: block; /* جعل الرابط بعرض العنصر كاملاً لتسهيل الضغط */
+    text-decoration: none; /* إزالة الخط السفلي من الروابط */
+    color: #333; /* لون النص داخل الروابط */
+    padding: 15px; /* حشو داخلي لكل رابط */
+    transition: 0.3s; /* تأثير حركة ناعم للنص عند التحويم */
+}
+
+.header .links ul li:not(:last-child) a {
+    border-bottom: 1px solid #ddd; /* إضافة خط فاصل بين كل عنصر والآخر ما عدا الأخير */
+}
+
+.header .links ul li a:hover {
+    padding-left: 25px; /* إزاحة النص قليلاً لليسار عند التحويم بالماوس */
+}
+
+/* End Header */
+
+/* Start Landing */
+
+.Landing {
+    background-image: url(../images/3899617.jpg); /* مسار صورة الخلفية */
+    background-size: cover; /* جعل الصورة تغطي كامل مساحة القسم */
+    height: calc(100vh - 64px); /* ارتفاع القسم يساوي ارتفاع الشاشة مطروحاً منه ارتفاع الهيدر */
+    position: relative; /* مرجع لتموضع النص الداخلي */
+}
+
+.Landing .intro-text {
+    position: absolute; /* تموضع مطلق لتوسيط النص */
+    top: 50%; /* إزاحة من الأعلى بنسبة 50% */
+    left: 50%; /* إزاحة من اليسار بنسبة 50% */
+    transform: translate(-50%, -50%); /* توسيط النص بدقة في المنتصف */
+    text-align: center; /* محاذاة النص في المنتصف */
+    width: 340px; /* عرض مربع النص */
+    max-width: 100%; /* ضمان عدم خروج النص عن الشاشة في الهواتف */
+    line-height: 1.8; /* ارتفاع السطر لتحسين القرائية */
+}
+
+.Landing .intro-text h1 {
+    margin: 0; /* إلغاء الهوامش الافتراضية */
+    font-weight: bold; /* جعل الخط عريضاً */
+    font-size: 50px; /* حجم خط العنوان الترحيبي */
+    color: var(--main-color); /* استخدام اللون الرئيسي للتصميم */
+}
+
+/* End Landing */
+
+/* Start Features */
+
+.features {
+    padding-top: var(--section-padding); /* هامش داخلي علوي من المتغيرات */
+    padding-bottom: var(--section-padding); /* هامش داخلي سفلي من المتغيرات */
+    background-color: var(--section-backgrund); /* خلفية رمادية فاتحة من المتغيرات */
+}
+
+.features .container {
+    display: grid; /* استخدام نظام الشبكة لتقسيم العناصر */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* توزيع التلقائي للمربعات بعرض أدنى 300px */
+    gap: 20px; /* المسافة بين كل مربع والآخر */
+}
+
+.features .feat {
+    padding: 20px; /* حشو داخلي لكل ميزة */
+    text-align: center; /* محاذاة المحتوى في المنتصف */
+}
+
+.features .feat i {
+    color: var(--main-color); /* تلوين الأيقونات باللون الرئيسي */
+}
+
+.features .feat h3 {
+    font-weight: 800; /* جعل الخط عريضاً جداً */
+    margin: 30px 0; /* هوامش علوية وسفلية للعنوان */
+}
+
+.features .feat p {
+    line-height: 1.8; /* ارتفاع السطر للنص */
+    color: #777; /* لون رمادي للنص */
+    font-size: 17px; /* حجم الخط */
+}
+
+.Services {
+    padding-top: 60px; /* هامش داخلي علوي */
+    padding-bottom: 60px; /* هامش داخلي سفلي */
+}
+
+.Services .services-content {
+    display: grid; /* نظام الشبكة لتقسيم الأعمدة */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* تقسيم تلقائي بعرض أدنى 300px */
+    gap: 20px; /* المسافات بين الأعمدة */
+    margin-top: 100px; /* هامش علوي للمحتوى مفصولاً عن العنوان */
+}
+
+.Services .services-content .col .srv {
+    display: flex; /* ترتيب الأيقونة والنص بجانب بعضهما */
+    margin-bottom: 20px; /* مسافة أسفل كل خدمة */
+}
+
+@media (max-width: 767px) {
+    .Services .services-content .col .srv {
+        flex-direction: column; /* تحويل الترتيب إلى عمودي في الهواتف */
+        text-align: center; /* محاذاة النص في المنتصف للهواتف */
+    }
+}
+
+.Services .services-content .col .srv i {
+    color: var(--main-color); /* تلوين الأيقونة */
+    flex-basis: 60px; /* عرض ثابت لمنطقة الأيقونة */
+}
+
+.Services .services-content .col .srv .text {
+    flex: 1; /* جعل النص يأخذ بقية المساحة المتاحة */
+}
+
+.Services .services-content .col .srv h3 {
+    margin: 0 0 20px; /* مسافة أسفل عنوان الخدمة */
+}
+
+.Services .services-content .col .srv .text p {
+    color: #444; /* لون النص */
+    font-weight: 300; /* خفة وزن الخط */
+    line-height: 1.6; /* ارتفاع السطر */
+}
+
+.Services .services-content .image {
+    position: relative; /* مرجع للعنصر التجميلي الخلفي */
+    text-align: center; /* توسط الصورة */
+}
+
+.Services .services-content .image img {
+    width: 260px; /* عرض الصورة */
+    height: 350px; /* ارتفاع الصورة */
+}
+
+.Services .services-content .image::before {
+    content: ''; /* عنصر وهمي لإنشاء خلفية مستطيلة داكنة خلف الصورة */
+    position: absolute; /* تموضع مطلق الخلفية */
+    top: -50px; /* بروز للخارج من الأعلى */
+    right: 0; /* محاذاة لليمين */
+    width: 80px; /* عرض المستند الخلفي */
+    height: calc(100% + 100px); /* ارتفاع يمتد فوق وتحت الصورة */
+    background-color: var(--secondary-color); /* اللون الثانوي */
+    z-index: -1; /* إرسال المستطيل خلف الصورة */
+}
+
+@media (max-width: 1199px) {
+    .image-column {
+        display: none; /* إخفاء عامود الصورة في الشاشات غير الكبيرة */
+    }
+}
+
+.portfolio {
+    padding-top: var(--section-padding); /* حشو علوي */
+    padding-bottom: var(--section-padding); /* حشو سفلي */
+    background-color: var(--section-backgrund); /* خلفية القسم */
+}
+
+.portfolio .portfolio-content {
+    display: grid; /* نظام شبكي للمشاريع */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* توزيع المشاريع تجاوبياً */
+    gap: 30px; /* مسافات بين بطاقات المشاريع */
+    margin-top: 80px; /* مسافة علوية عن العنوان */
+}
+
+.portfolio .portfolio-content .card {
+    background-color: white; /* خلفية بيضاء لكل بطاقة مشروع */
+}
+
+.portfolio .portfolio-content .card img {
+    max-width: 100%; /* جعل الصورة تجاوبية ولا تتجاوز البطاقة */
+}
+
+.portfolio .portfolio-content .card .info {
+    padding: 20PX; /* مسافة داخلية لنصوص البطاقة */
+}
+
+.portfolio .portfolio-content .card .info h3 {
+    margin: 0; /* إلغاء الهوامش للعنوان */
+}
+
+.portfolio .portfolio-content .card .info p {
+    color: #777; /* لون وصف المشروع */
+    line-height: 1.6; /* ارتفاع السطر */
+    margin-bottom: 0; /* إزالة الهامش السفلي */
+}
+
+/* End Features */
+
+/* Start about */
+
+.about {
+    padding-top: var(--section-padding); /* حشو علوي */
+    padding-bottom: calc(var(--section-padding) + 60px); /* حشو سفلي أطول */
+}
+
+.about .about-content {
+    margin-top: 100px; /* مسافة عن العنوان */
+    display: flex; /* ترتيب أفقياً للصورة والنص */
+    flex-wrap: wrap; /* السماح بالتفاف العناصر في الشاشات الصغيرة */
+    justify-content: space-between; /* توزيع المساحة بين الصورة والنص */
+}
+
+@media (max-width: 991px) {
+    .about .about-content {
+        flex-direction: column; /* تحويل الترتيب لعمودي للشاشات المتوسطة والصغيرة */
+        text-align: center; /* محاذاة المحتوى في المنتصف */
+    }
+}
+
+.about .about-content .image {
+    position: relative; /* مرجع للأشكال الزخرفية حول الصورة */
+    width: 250px; /* عرض حاوية الصورة */
+    height: 375px; /* ارتفاع حاوية الصورة */
+}
+
+@media (max-width: 991px) {
+    .about .about-content .image {
+        margin: 0 auto 50px; /* توسط الصورة وإضافة هامش سفلي في الهواتف */
+    }
+}
+
+.about .about-content .image::before {
+    content: ''; /* عنصر خلفي رمادي خلف الصورة */
+    position: absolute;
+    background-color: #ebeced;
+    width: 100px;
+    height: calc(100% + 80px);
+    top: -40px;
+    left: -20px;
+    z-index: -1; /* خلف الصورة */
+}
+
+.about .about-content .image::after {
+    content: ''; /* عنصر زخرفي ملون بشكل حرف L بجانب الصورة */
+    width: 120px;
+    position: absolute;
+    height: 300px;
+    border-left: 60px solid var(--main-color);
+    border-bottom: 60px solid var(--main-color);
+    right: -150px;
+    top: -40px;
+    z-index: -1; /* خلف الصورة */
+}
+
+@media (max-width: 991px) {
+    .about .about-content .image::before,
+    .about .about-content .image::after {
+        display: none; /* إخفاء الأشكال الزخرفية المعقدة في الشاشات الصغيرة */
+    }
+}
+
+.about .about-content .image img {
+    max-width: 100%; /* ملاءمة الصورة للحاوية */
+}
+
+.about .about-content .text {
+    flex-basis: calc(100% - 500px); /* عرض النص المتبقي بعد طرح مساحة الصورة والزخارف */
+}
+
+.about .about-content .text p:first-of-type {
+    font-weight: bold; /* جعل الفقرة الأولى عريضة الخط */
+    line-height: 2; /* ارتفاع سطر واسع */
+    margin-bottom: 50px; /* مسافة بين الفقرتين */
+}
+
+.about .about-content .text p:last-of-type {
+    color: #777; /* لون الفقرة الثانية */
+    line-height: 2; /* ارتفاع السطر */
+}
+
+.about .about-content .text hr {
+    display: inline-block; /* إمكانية التحكم بعرض الخط الفاصل */
+    width: 50%; /* عرض الخط نصف مساحة الفقرة */
+    border-color: var(--main-color); /* لون الخط الفاصل */
+}
+
+/* End about */
+
+/* start contact */
+
+.contact {
+    padding-top: var(--section-padding); /* حشو علوي */
+    padding-bottom: var(--section-padding); /* حشو سفلي */
+    background-color: var(--section-backgrund); /* خلفية رمادية فاتحة */
+}
+
+.contact .info {
+    padding-top: var(--section-padding); /* حشو علوي داخلي */
+    padding-bottom: var(--section-padding); /* حشو سفلي داخلي */
+    text-align: center; /* توسيط محتوى التواصل */
+}
+
+.contact .info .label {
+    font-size: 35px; /* حجم خط العنوان التشجيعي */
+    font-weight: 800; /* خط عريض جداً */
+    letter-spacing: -2px; /* تقريب الحروف */
+    color: var(--secondary-color); /* اللون الثانوي */
+    margin-bottom: 15px; /* مسافة أسفل النص */
+}
+
+.contact .info .link {
+    text-decoration: none; /* إزالة الخط تحت رابط البريد */
+    color: var(--main-color); /* لون رابط البريد باللون الرئيسي */
+    font-size: 35px; /* حجم خط كبير للبريد */
+    font-weight: 800; /* خط عريض */
+    display: block; /* جعل الرابط في سطر منفرد */
+}
+
+.contact .info .social {
+    margin-top: 20px; /* مسافة علوية لروابط التواصل */
+    display: flex; /* ترتيب أيقونات التواصل أفقياً */
+    justify-content: center; /* توسيط الأيقونات أفقياً */
+}
+
+.contact .info .social i {
+    margin-left: 10px; /* مسافة بين كل أيقونة وأخرى */
+    color: var(--secondary-color); /* لون الأيقونات */
+}
+
+@media (max-width: 767px) {
+    .contact .info .label,
+    .contact .info .link {
+        font-size: 30px; /* تصغير حجم الخط في الهواتف */
+    }
+}
+
+/* End contact */
+
+/* start footer  */
+
+.footer {
+    text-align: center; /* توسيط نص الحقوق */
+    background-color: var(--secondary-color); /* خلفية الفوتر باللون الثانوي الداكن */
+    padding: 30px 10px; /* حشو داخلي للفوتر */
+    color: white; /* لون النص أبيض */
+    font-size: 18px; /* حجم الخط */
+}
+
+.footer span {
+    color: var(--main-color); /* تلوين اسم القالب باللون التركواز الرئيسي */
+    font-weight: bold; /* جعل الاسم عريضاً */
+}
+
+/* End footer  */
